@@ -1,0 +1,7 @@
+add a function for each of the required chrs 
+Then have a list of names in order to call these functions
+then have a randint choose which function to run popping from a list of numbers correspdoning to the functions
+Create a function for each needed chr eg. symbol, capital, random, number
+then a list of numbers correspdonging to each needed type up to twelve eg. 1,2,3,4,3,3,3,3, etc
+then create a dictionary that has a number linked to the function call 
+then have a function randomly call each function usung a number popped from the number list
