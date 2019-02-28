@@ -1,21 +1,17 @@
 #passwordGen.py
 #Password generator
 
-#33 to 126 ascii code
-# caps 65 - 90 
-# symbols 33 - 47 & 58 - 64 & 91 - 96 & 123 - 126
-
-
-#have a fu
-
 from random import randint
 
 def main():
-    #ask what strength password they want
-    
-    print(createWeakPassword())
-    
-    #choose from list of 
+    run = True
+    while run == True:
+        if input("Do you require a strong or weak password?: ") == "strong":
+            print(createStrongPassword())
+        else:
+            print(createWeakPassword())
+        if input("Create another password? : Enter 'y' for yes ") != 'y':
+            run = False
 
 
 def createWeakPassword():
@@ -35,7 +31,6 @@ def createWeakPassword():
     return password
 
 
-
 def createStrongPassword():
     password = []
     neededCharacters = [1,2,3,4,4,4,4,4,4,4,4,4] 
@@ -45,7 +40,7 @@ def createStrongPassword():
         functionCode = charLimits[functionCall]
         password.append(getCharacter(functionCode))
     password = "".join(password)
-    print(password)
+    return password
 
 
 def getCharacter(charType):
@@ -53,9 +48,6 @@ def getCharacter(charType):
     character = chr(randint(lowerLimit, upperLimit))
     return character
     
-
-
-
 
 if __name__ == "__main__":
     main()
